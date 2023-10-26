@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kajiado WEB MAP</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="giswebmap/kajiado.geojson"></script>
+<!--<script>-->
+<!--        location = "http://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html";-->
+<!--    </script>-->
+</head>
+    <style>
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+height: 10%;
+width: 100%;
+background-color:#CCCCFF;
+color: white;
+
+text-align: center;
+}
+/* The sidenav */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  z-index: 1;
+  top: 55px;
+  left: 0;
+  background-color:#CCCCFF;
+  overflow-x: hidden;
+
+}
+
+
+ #map {
+            margin-left: 220px; /* Adjust the margin to create space for the sidebar */
+            height: 650px;
+
+
+        }
+</style>
+
+<body>
+
+        <section class="col-md-12">
+            <div class="Jumbotron">
+
+               <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Kajiado County</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <button><a class="nav-link " href="#">Home</a></button>
+              </li>
+              <li class="nav-item">
+                <button><a class="nav-link" href="#">More</a></button>
+              </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" onsubmit="searchLocation(); return false;">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="locationInput">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+            </nav>
+
+            </div>
+            </section>
+        <section>
+            <div>
+        <!-- Use any element to open the sidenav -->
+        <!--<span onclick="openNav()">open</span>-->
+
+                <div id="mySidenav" class="sidenav" style="">
+                    <P>Area: 21,293 km²</P>
+                    
+                </div>
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+            <div class="col-md-11">
+            <center><h2> <b><u>KAJIADO COUNTY WEB MAP</u></b></h2></center>
+
+            <div id="map" ></div>
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <script src="JSFILE.js"></script>
+
+        </div>
+
+        </div>
+
+        </section>
+
+
+
+        <section class="col-md-12">
+
+        <div class="footer">
+            <I><h5> &copy; Group 10 2023. All Right Reserved. </h5></I>
+            <I><h5> Kajiado Map is Powered By Group 10 </h5></I>
+
+        </div>
+        </section>
+</body>
+</html>
+
